@@ -9,19 +9,19 @@ function actions.utils()
 			["json.lua"] = ""
 		},
 		files = {
-			["zyneo-utils/zyneo-gencfg.lua"] = "/bin",
-			["zyneo-utils/zyneo-geninitramfs.lua"] = "/bin",
-			["zyneo-utils/zyneo-update.lua"] = "/bin",
+			["master/zyneo-utils/zyneo-gencfg.lua"] = "/bin",
+			["master/zyneo-utils/zyneo-geninitramfs.lua"] = "/bin",
+			["master/zyneo-utils/zyneo-update.lua"] = "/bin",
 			@[[function add_etc(path)
 				local f = io.popen("ls zyneo-utils/"..path, "r")
 				for line in f:lines() do]]
-			["zyneo-utils/@[{path}]/@[{line}]"] = "//etc/zorya-neo/@[{path}]/",
+			["master/zyneo-utils/@[{path}]/@[{line}]"] = "//etc/zorya-neo/@[{path}]/",
 			@[[end end]]
 			@[[add_etc("config.d")]]
 			@[[add_etc("initramfs.d")]]
-			["extras/zyneo-flashprom.lua"] = "/bin",
-			["extras/zyneo-osdiwrite.lua"] = "/bin",
-			["extras/zyneo-managed-bios-setup.lua"] = "/bin"
+			["master/extras/zyneo-flashprom.lua"] = "/bin",
+			["master/extras/zyneo-osdiwrite.lua"] = "/bin",
+			["master/extras/zyneo-managed-bios-setup.lua"] = "/bin"
 		},
 		name = "Zorya NEO Utilities",
 		authors = "Adorable-Catgirl",

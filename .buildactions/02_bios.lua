@@ -13,7 +13,7 @@ function actions.gen_biosinstall()
 				["zyneo-utils"] = ""
 			},
 			files = {
-				["installers/zyneo-biosinstaller-"..platforms[i]..".lua"] = "//etc/zorya-neo/bios/"
+				["master/installers/zyneo-biosinstaller-"..platforms[i]..".lua"] = "//etc/zorya-neo/bios/"
 			},
 			name = "Zorya NEO BIOS installer: "..platforms[i],
 			authors = "Adorable-Catgirl",

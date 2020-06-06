@@ -1,11 +1,19 @@
-local mods = {}
+local pkgs = {}
+
+local function get_versum(path)
+	local sh = io.popen("sha256sum "..path, "r")
+	local sum = sh:read(8)
+	sh:close()
+	return sum
+end
 
 function actions.gen_repo()
 	actions.build_zyneo()
 	actions.gen_mods()
 	actions.gen_libs()
 	--actions.gen_programs()
-	--actiosn.gen_biosinstall()
+	actions.gen_biosinstall()
+	actions.utils()
 	actions.write_out()
 end
 

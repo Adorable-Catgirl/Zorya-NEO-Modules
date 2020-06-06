@@ -1,16 +1,29 @@
+function serialize_table(tbl, indent)
+	indent = indent or "    "
+	local ser = ""
+	for k, v in pairs(tbl) do
+		ser = ser .. indent .. "["
+		if (type(k) == "string") then
+			ser = ser .. "\""..k.."\""
+		else
+			ser = ser .. tostring(k)
+		end
+		ser = ser .. "] = "
+		if (type(v) == "table") then
+			ser = ser .. "{\n" .. serialize_table(v, indent .. "    ")..indent.."},\n"
+		elseif (type(v) == "string") then
+			ser = ser .. "\""..v.."\",\n"
+		else
+			ser = ser .. tostring(v) .. ",\n"
+		end
+	end
+	return ser
+end
+
 function actions.write_out()
 	local f = io.open("programs.cfg", "w")
 	f:write("{\n")
-	for i=1, #mods do
-		local mod = mods[i]
-		f:write(string.format("    [\"%s\"] = {\n", mod.name))
-		f:write(string.format("        files = {[\"%s\"] = \"//etc/zorya-neo/%s\"},\n", mod.path, mod.path))
-		f:write(string.format("        name = \"%s\",\n", mod.name))
-		f:write(string.format("        description = \"%s\",\n", mod.name))
-		f:write("        authors=\"Adorable-Catgirl\",\n")
-		f:write("        tree=\"tree/master\",\n")
-		f:write("    },\n")
-	end
+	f:write(serialize_table(pkgs))
 	f:write("}\n")
 	f:close()
 end

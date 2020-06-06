@@ -22,7 +22,7 @@ function actions.utils()
 		},
 		name = "Zorya NEO Utilities",
 		authors = "Adorable-Catgirl",
-		desc = "Utilities for managing your Zorya NEO installation.",
+		description = "Utilities for managing your Zorya NEO installation.",
 		note = "Zorya is still unstable.",
 		xpm = {
 			version = commit

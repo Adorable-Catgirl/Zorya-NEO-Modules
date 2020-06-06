@@ -17,6 +17,7 @@ function actions.gen_biosinstall()
 			},
 			name = "Zorya NEO BIOS installer: "..platforms[i],
 			authors = "Adorable-Catgirl",
+			description = "This is an automatically generated repo.",
 			note = "This is only useful if you have zyneo-utils.",
 			xpm = {
 				version = get_versum("installers/zyneo-biosinstaller-"..platforms[i]..".lua")

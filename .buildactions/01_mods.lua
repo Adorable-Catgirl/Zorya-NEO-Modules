@@ -19,6 +19,7 @@ function actions.gen_mods()
 			},
 			name = "Zorya NEO Module: "..name,
 			author = "Adorable-Catgirl",
+			description = "This is an automatically generated repo.",
 			note = "This is only useful if you have zyneo-utils.",
 			xpm = {
 				version = sum
@@ -46,6 +47,7 @@ function actions.gen_libs()
 			},
 			name = "Zorya NEO Library: "..name,
 			authors = "Adorable-Catgirl",
+			description = "This is an automatically generated repo.",
 			note = "This is only useful if you have zyneo-utils.",
 			xpm = {
 				version = sum

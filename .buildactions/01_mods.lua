@@ -15,7 +15,7 @@ function actions.gen_mods()
 				["zyneo-utils"] = ""
 			},
 			files = {
-				[path] = "//etc/zorya-neo/"..path
+				[path] = "//etc/zorya-neo/mods"
 			},
 			name = "Zorya NEO Module: "..name,
 			authors = "Adorable-Catgirl",
@@ -43,7 +43,7 @@ function actions.gen_libs()
 				["zyneo-utils"] = ""
 			},
 			files = {
-				[path] = "//etc/zorya-neo/"..path
+				[path] = "//etc/zorya-neo/libs"
 			},
 			name = "Zorya NEO Library: "..name,
 			authors = "Adorable-Catgirl",

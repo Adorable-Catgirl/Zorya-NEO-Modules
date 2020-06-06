@@ -26,6 +26,11 @@ function actions.utils()
 		note = "Zorya is still unstable.",
 		xpm = {
 			version = commit
+		},
+		postinstall = {
+			"mkdir /.zy2",
+			"zyneo-gencfg",
+			"zyneo-geninitramfs"
 		}
 	}
 end

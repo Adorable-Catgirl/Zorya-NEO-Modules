@@ -12,7 +12,11 @@ end
 actions[#actions+1] = "gen_repo"
 
 function actions.build_zyneo()
-	os.execute("rm -rf .tmp")
-	os.execute("git clone https://github.com/Adorable-Catgirl/Zorya-NEO.git .tmp")
-	os.execute("cd .tmp; ./build.sh")
+	--os.execute("rm -rf .tmp")
+	if (os.execute("[[ -d tmp ]]")) then
+		os.execute("cd tmp; git pull")
+	else
+		os.execute("git clone https://github.com/Adorable-Catgirl/Zorya-NEO.git tmp")
+	end
+	os.execute("cd tmp; ./build.sh")
 end

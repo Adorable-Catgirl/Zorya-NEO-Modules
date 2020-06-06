@@ -14,6 +14,7 @@ function actions.gen_repo()
 	--actions.gen_programs()
 	actions.gen_biosinstall()
 	actions.utils()
+	actions.metapackages()
 	actions.write_out()
 end
 

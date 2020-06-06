@@ -18,7 +18,7 @@ function actions.gen_mods()
 				[path] = "//etc/zorya-neo/"..path
 			},
 			name = "Zorya NEO Module: "..name,
-			author = "Adorable-Catgirl",
+			authors = "Adorable-Catgirl",
 			description = "This is an automatically generated repo.",
 			note = "This is only useful if you have zyneo-utils.",
 			xpm = {

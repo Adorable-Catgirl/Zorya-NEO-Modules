@@ -5,4 +5,4 @@ if initramfs == "true" then
 	platform = "initramfs"
 end
 
-local f = loadfile("/etc/zorya-neo/bios/"..platform..".lua", require("computer").getBootAddress())
+assert(loadfile("/etc/zorya-neo/bios/"..platform..".lua"))(require("computer").getBootAddress())

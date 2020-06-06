@@ -19,7 +19,9 @@ function actions.utils()
 			@[[end end]]
 			@[[add_etc("config.d")]]
 			@[[add_etc("initramfs.d")]]
-			["extras/zyneo-biossetup.lua"] = "/bin"
+			["extras/zyneo-flashprom.lua"] = "/bin",
+			["extras/zyneo-osdiwrite.lua"] = "/bin",
+			["extras/zyneo-managed-bios-setup.lua"] = "/bin"
 		},
 		name = "Zorya NEO Utilities",
 		authors = "Adorable-Catgirl",

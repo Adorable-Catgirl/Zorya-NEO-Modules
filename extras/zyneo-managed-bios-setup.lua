@@ -5,4 +5,4 @@ if initramfs == "true" then
 	platform = "initramfs"
 end
 
-assert(loadfile("/etc/zorya-neo/bios/"..platform..".lua"))(require("computer").getBootAddress())
+assert(loadfile("/etc/zorya-neo/bios/zyneo-biosinstaller-"..platform..".lua"))(require("computer").getBootAddress())

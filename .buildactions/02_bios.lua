@@ -16,7 +16,7 @@ function actions.gen_biosinstall()
 				["installers/zyneo-biosinstaller-"..platforms[i]..".lua"] = "//etc/zorya-neo/bios/"..platforms[i]..".lua"
 			},
 			name = "Zorya NEO BIOS installer: "..platforms[i],
-			author = "Adorable-Catgirl",
+			authors = "Adorable-Catgirl",
 			note = "This is only useful if you have zyneo-utils.",
 			xpm = {
 				version = get_versum("installers/zyneo-biosinstaller-"..platforms[i]..".lua")

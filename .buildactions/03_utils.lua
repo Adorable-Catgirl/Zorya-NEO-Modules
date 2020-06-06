@@ -21,7 +21,7 @@ function actions.utils()
 			@[[add_etc("initramfs.d")]]
 		},
 		name = "Zorya NEO Utilities",
-		author = "Adorable-Catgirl",
+		authors = "Adorable-Catgirl",
 		desc = "Utilities for managing your Zorya NEO installation.",
 		note = "Zorya is still unstable.",
 		xpm = {

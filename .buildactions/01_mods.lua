@@ -45,7 +45,7 @@ function actions.gen_libs()
 				[path] = "//etc/zorya-neo/"..path
 			},
 			name = "Zorya NEO Library: "..name,
-			author = "Adorable-Catgirl",
+			authors = "Adorable-Catgirl",
 			note = "This is only useful if you have zyneo-utils.",
 			xpm = {
 				version = sum
